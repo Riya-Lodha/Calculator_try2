@@ -1,7 +1,16 @@
 #!/bin/bash
 
-echo "Hyy Riya\n"
+echo "Hyy Riya "
 read Riya
+
+if [ $Riya  == "Hyy" ] 
+then
+	echo "You can continue."
+else
+	echo "You cannot continue."
+	exit
+fi
+
 echo "Give me first Number:"
 read x1
 echo "Give me second NUmber:"
@@ -16,5 +25,6 @@ case $opt in
     '-') echo "Result is $x1-$x2="$(expr $x1 - $x2);;
     '*') echo "Result is $x1*$x2="$(expr $x1 \* $x2);;
     '/') echo "Result is $x1/$x2="$(expr $x1 / $x2);;
+    '%') echo "Result is $x1%$x2="$(expr $x1 % $x2);;
 esac
 
