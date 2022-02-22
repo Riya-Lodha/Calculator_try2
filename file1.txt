@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Hyy Riya\n"
+read Riya
+echo "Give me first Number:"
+read x1
+echo "Give me second NUmber:"
+read x2
+echo "Your two numbers are $x1 and $x2"
+
+echo "Now give me a operator"
+read opt
+
+case $opt in
+    '+') echo "Result is $x1+$x2="$(expr $x1 + $x2);;
+    '-') echo "Result is $x1-$x2="$(expr $x1 - $x2);;
+    '*') echo "Result is $x1*$x2="$(expr $x1 \* $x2);;
+    '/') echo "Result is $x1/$x2="$(expr $x1 / $x2);;
+esac
+
